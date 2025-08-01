@@ -381,3 +381,13 @@ function submitForm() {
     // Create confetti effect
     createConfetti();
 }
+
+// Initialize the form
+document.addEventListener('DOMContentLoaded', function () {
+    updateProgressBar();
+
+    // Submit button event listener
+    document.getElementById('submitBtn').addEventListener('click', function () {
+        validateStep(currentStep);
+    });
+});
