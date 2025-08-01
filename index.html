@@ -88,6 +88,73 @@
                         </button>
                     </div>
                 </div>
+                 <!-- Step 2: Academic Information -->
+                <div id="step-2" class="form-step">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-6 pb-2 section-header">Academic Information</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="degree" class="block text-sm font-medium text-gray-700 mb-1">Degree Program*</label>
+                            <select id="degree" name="degree" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                                <option value="">Select a program</option>
+                                <option value="cs">Computer Science</option>
+                                <option value="eng">Engineering</option>
+                                <option value="bus">Business Administration</option>
+                                <option value="med">Medicine</option>
+                                <option value="law">Law</option>
+                                <option value="arts">Arts & Humanities</option>
+                                <option value="sci">Natural Sciences</option>
+                            </select>
+                            <div id="degree-error" class="error-message hidden">Please select a degree program</div>
+                        </div>
+                        
+                        <div>
+                            <label for="year" class="block text-sm font-medium text-gray-700 mb-1">Intake Year*</label>
+                            <select id="year" name="year" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                                <option value="">Select year</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                            </select>
+                            <div id="year-error" class="error-message hidden">Please select an intake year</div>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <label for="institution" class="block text-sm font-medium text-gray-700 mb-1">Previous Institution*</label>
+                            <input type="text" id="institution" name="institution" 
+                                   class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                            <div id="institution-error" class="error-message hidden">Institution name is required</div>
+                        </div>
+                        
+                        <div>
+                            <label for="gpa" class="block text-sm font-medium text-gray-700 mb-1">GPA/Percentage*</label>
+                            <input type="text" id="gpa" name="gpa" placeholder="e.g. 3.8 or 92%"
+                                   class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                            <div id="gpa-error" class="error-message hidden">Please enter a valid GPA/Percentage</div>
+                        </div>
+                        
+                        <div>
+                            <label for="qualification" class="block text-sm font-medium text-gray-700 mb-1">Highest Qualification*</label>
+                            <input type="text" id="qualification" name="qualification" placeholder="e.g. High School Diploma"
+                                   class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                            <div id="qualification-error" class="error-message hidden">Qualification is required</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between mt-8">
+                        <button type="button" onclick="prevStep()" class="btn-secondary px-6 py-3 rounded-lg transition flex items-center font-medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                            </svg> Back
+                        </button>
+                        <button type="button" onclick="nextStep()" class="btn-primary px-6 py-3 text-white rounded-lg transition flex items-center font-medium">
+                            Next <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
     
     <script src="Js/app.js"></script>
 </body>
