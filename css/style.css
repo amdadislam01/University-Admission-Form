@@ -1,0 +1,175 @@
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.progress-bar {
+    transition: width 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.input-error {
+    border-color: #e53e3e;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.form-container {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.97) 0%, rgba(248, 249, 253, 0.98) 100%);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #4f46e5 0%, #3730a3 50%, #312e81 100%);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3), 0 2px 4px -1px rgba(79, 70, 229, 0.2);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #4338ca 0%, #312e81 100%);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    color: #3730a3;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #c7d2fe 0%, #a5b4fc 100%);
+}
+
+.section-header {
+    border-bottom: 2px solid #a5b4fc;
+}
+
+.radio-card {
+    transition: all 0.3s ease;
+}
+
+.radio-card:hover {
+    border-color: #818cf8;
+}
+
+.radio-card:has(input:checked) {
+    border-color: #4f46e5;
+    background-color: #eef2ff;
+    box-shadow: 0 0 0 1px #4f46e5;
+}
+
+.form-title {
+    background: linear-gradient(135deg, #312e81 0%, #3730a3 50%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input:focus,
+select:focus {
+    --tw-ring-color: #6366f1;
+    border-color: #4f46e5;
+}
+
+/* Success Message Styles */
+.success-message {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.checkmark-container {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.checkmark {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 3;
+    stroke: #4f46e5;
+    stroke-miterlimit: 10;
+    box-shadow: 0 0 0 rgba(79, 70, 229, 0.4);
+    animation: checkmark-fill 0.4s ease-in-out 0.4s forwards, checkmark-scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke: #4f46e5;
+    fill: none;
+    animation: checkmark-stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: checkmark-stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes checkmark-stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes checkmark-scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes checkmark-fill {
+    100% {
+        box-shadow: inset 0 0 0 100px rgba(79, 70, 229, 0.1);
+    }
+}
+
+/* Confetti Styles */
+.confetti-particle {
+    position: fixed;
+    z-index: 9999;
+    border-radius: 50%;
+    animation: confetti-fall 3s linear forwards;
+}
