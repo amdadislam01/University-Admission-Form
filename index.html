@@ -155,6 +155,113 @@
                         </button>
                     </div>
                 </div>
+                <!-- Step 3: Payment Information -->
+                <div id="step-3" class="form-step">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-6 pb-2 section-header">Payment Information</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-3">Payment Method*</label>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <label class="radio-card border rounded-lg p-4 flex items-center cursor-pointer border-gray-300">
+                                    <input type="radio" name="paymentMethod" value="credit" class="text-indigo-600 mr-3 focus:ring-indigo-500">
+                                    <div>
+                                        <div class="font-medium text-gray-800">Credit Card</div>
+                                        <div class="text-sm text-gray-500 mt-1">Visa, Mastercard, etc.</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="radio-card border rounded-lg p-4 flex items-center cursor-pointer border-gray-300">
+                                    <input type="radio" name="paymentMethod" value="bank" class="text-indigo-600 mr-3 focus:ring-indigo-500">
+                                    <div>
+                                        <div class="font-medium text-gray-800">Bank Transfer</div>
+                                        <div class="text-sm text-gray-500 mt-1">Direct bank payment</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="radio-card border rounded-lg p-4 flex items-center cursor-pointer border-gray-300">
+                                    <input type="radio" name="paymentMethod" value="other" class="text-indigo-600 mr-3 focus:ring-indigo-500">
+                                    <div>
+                                        <div class="font-medium text-gray-800">Other</div>
+                                        <div class="text-sm text-gray-500 mt-1">Other payment options</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div id="paymentMethod-error" class="error-message hidden">Please select a payment method</div>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <div id="creditCardFields" class="hidden space-y-4 p-6 border rounded-lg bg-gray-50 animate__animated animate__fadeIn">
+                                <h3 class="font-medium text-gray-800 mb-2">Credit Card Details</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="cardNumber" class="block text-sm font-medium text-gray-700 mb-1">Card Number*</label>
+                                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" 
+                                               class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                                        <div id="cardNumber-error" class="error-message hidden">Valid card number is required</div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="cardName" class="block text-sm font-medium text-gray-700 mb-1">Name on Card*</label>
+                                        <input type="text" id="cardName" name="cardName" placeholder="John Doe"
+                                               class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                                        <div id="cardName-error" class="error-message hidden">Name on card is required</div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="expiryDate" class="block text-sm font-medium text-gray-700 mb-1">Expiry Date*</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" 
+                                               class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                                        <div id="expiryDate-error" class="error-message hidden">Valid expiry date required</div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="cvv" class="block text-sm font-medium text-gray-700 mb-1">CVV*</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" 
+                                               class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                                        <div id="cvv-error" class="error-message hidden">CVV is required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="bankTransferFields" class="hidden space-y-4 p-6 border rounded-lg bg-gray-50 animate__animated animate__fadeIn">
+                                <h3 class="font-medium text-gray-800 mb-2">Bank Transfer Instructions</h3>
+                                <div class="space-y-3 text-gray-700">
+                                    <p><span class="font-medium">Bank Name:</span> Global University Bank</p>
+                                    <p><span class="font-medium">Account Number:</span> 1234567890</p>
+                                    <p><span class="font-medium">IBAN:</span> US33 1234 5678 9012 3456 7890</p>
+                                    <p><span class="font-medium">Swift Code:</span> GLBUNIUS</p>
+                                    <p><span class="font-medium">Amount:</span> $75.00 USD</p>
+                                    <p class="text-sm text-gray-600 mt-3">Please include your full name and application ID as reference when making the transfer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" id="terms" name="terms" class="rounded text-indigo-600 focus:ring-indigo-500">
+                                <span class="ml-2 text-sm text-gray-700">I agree to the <a href="#" class="text-indigo-600 hover:underline">terms and conditions</a> and acknowledge that my data will be processed in accordance with the <a href="#" class="text-indigo-600 hover:underline">privacy policy</a>.*</span>
+                            </label>
+                            <div id="terms-error" class="error-message hidden">You must agree to the terms</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between mt-8">
+                        <button type="button" onclick="prevStep()" class="btn-secondary px-6 py-3 rounded-lg transition flex items-center font-medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                            </svg> Back
+                        </button>
+                        <button type="button" id="submitBtn" class="btn-primary px-6 py-3 text-white rounded-lg transition flex items-center font-medium">
+                            Submit Application <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     
     <script src="Js/app.js"></script>
 </body>
