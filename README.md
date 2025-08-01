@@ -27,5 +27,5 @@ A simple and responsive **University Admission Form** built using **HTML**, **CS
 
 ## 📸 Screenshot
 
-<img src="https://i.postimg.cc/YOUR_IMAGE_LINK.png" alt="University Admission Form Screenshot" width="1000"/>
+<img src="https://ik.imagekit.io/yqnbhdlo4/Img/screenshot-2025-08-01-15-00-04.png?updatedAt=1754038821655" width="1000"/>
 
