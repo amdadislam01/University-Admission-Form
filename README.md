@@ -20,7 +20,7 @@ A simple and responsive **University Admission Form** built using **HTML**, **CS
 ## 🛠️ Technologies Used
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,js" alt="Tech Stack" width="120"/>
+  <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,js" alt="Tech Stack" width="320"/>
 </p>
 
 ---
