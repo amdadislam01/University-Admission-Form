@@ -17,6 +17,77 @@
         <!-- Form Container -->
         <div class="p-8">
             <h1 class="text-3xl font-bold form-title mb-6">University Admission Application</h1>
+
+            <!-- Form Steps -->
+            <form id="admissionForm" class="space-y-6">
+                <!-- Step 1: Personal Information -->
+                <div id="step-1" class="form-step active">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-6 pb-2 section-header">Personal Information</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name*</label>
+                            <input type="text" id="firstName" name="firstName" 
+                                   class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                            <div id="firstName-error" class="error-message hidden">First name is required</div>
+                        </div>
+                        
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name*</label>
+                            <input type="text" id="lastName" name="lastName" 
+                                   class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                            <div id="lastName-error" class="error-message hidden">Last name is required</div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                            <input type="email" id="email" name="email" 
+                                   class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                            <div id="email-error" class="error-message hidden">Please enter a valid email</div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                            <div id="phone-error" class="error-message hidden">Please enter a valid phone number</div>
+                        </div>
+                        
+                        <div>
+                            <label for="dob" class="block text-sm font-medium text-gray-700 mb-1">Date of Birth*</label>
+                            <input type="date" id="dob" name="dob" 
+                                   class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 transition">
+                            <div id="dob-error" class="error-message hidden">Date of birth is required</div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Gender*</label>
+                            <div class="flex space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" value="male" class="text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2">Male</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" value="female" class="text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2">Female</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" value="other" class="text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2">Other</span>
+                                </label>
+                            </div>
+                            <div id="gender-error" class="error-message hidden">Please select a gender</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-end mt-8">
+                        <button type="button" onclick="nextStep()" class="btn-primary px-6 py-3 text-white rounded-lg transition flex items-center font-medium">
+                            Next <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
     
     <script src="Js/app.js"></script>
 </body>
