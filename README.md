@@ -20,13 +20,12 @@ A simple and responsive **University Admission Form** built using **HTML**, **CS
 ## 🛠️ Technologies Used
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,tailwindcss" alt="Tech Stack" width="120"/>
+  <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,js" alt="Tech Stack" width="120"/>
 </p>
 
 ---
 
 ## 📸 Screenshot
 
-> Upload a screenshot and update the link below:
-```md
 <img src="https://i.postimg.cc/YOUR_IMAGE_LINK.png" alt="University Admission Form Screenshot" width="1000"/>
+
